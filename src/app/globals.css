@@ -2090,11 +2090,11 @@ ul, ol {
   .hero-title { font-size: 2.5rem; line-height: 1.12; }
   .hero-content { padding-top: 20px; padding-bottom: 20px; }
 
-  .navbar { height: 72px; }
-  .navbar.scrolled { height: 68px; }
+  .navbar { height: 76px; }
+  .navbar.scrolled { height: 72px; }
 
   .navbar-logo img {
-    height: 48px !important;
+    height: 52px !important;
   }
 
   .services-grid { grid-template-columns: 1fr; }

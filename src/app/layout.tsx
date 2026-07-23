@@ -85,6 +85,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://granddustglobal.com",
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 };
 
 // JSON-LD structured data

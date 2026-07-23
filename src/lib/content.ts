@@ -18,6 +18,7 @@ export const navigation = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Coimbatore Services", href: "/coimbatore" },
   { label: "Locations", href: "/locations" },
   { label: "Contact Us", href: "/contact" },
 ];

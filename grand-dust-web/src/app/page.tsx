@@ -21,14 +21,14 @@ function Hero() {
   return (
     <section className="hero" id="hero-section">
       <Image
-        src="/images/hero-bg.png"
-        alt="Grand architectural backdrop symbolizing elite financial excellence"
+        src="/images/hero-editorial.png"
+        alt="Grand Dust Global Ventures - Private Wealth Advisory Architecture"
         fill
-        className="hero-bg"
+        className="hero-bg-image"
         priority
         sizes="100vw"
       />
-      <div className="hero-overlay" />
+      <div className="hero-warm-light" />
       <div className="hero-content">
         <div className="hero-text">
           <ScrollReveal>
@@ -41,16 +41,25 @@ function Hero() {
               <span className="hero-title-accent">{heroContent.titleAccent}</span>
             </h1>
           </ScrollReveal>
+
           <ScrollReveal delay={2}>
+            <div className="hero-divider">
+              <div className="hero-divider-line" />
+              <div className="hero-divider-diamond" />
+              <div className="hero-divider-line" />
+            </div>
             <p className="hero-description">{heroContent.description}</p>
+
+            <div className="hero-tamil-divider" />
             <p className="hero-description-tamil" style={{ fontFamily: "var(--font-tamil)" }}>
               {heroContent.descriptionTamil}
             </p>
           </ScrollReveal>
+
           <ScrollReveal delay={3}>
             <div className="hero-buttons">
-              <Link href="/services" className="btn btn-primary">
-                Explore Services
+              <Link href="/contact" className="btn btn-primary">
+                Schedule Consultation
                 <svg
                   width="16"
                   height="16"
@@ -64,43 +73,39 @@ function Hero() {
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </Link>
-              <Link href="/contact" className="btn btn-outline-white">
-                Contact Us
+              <Link href="/services" className="btn btn-outline">
+                Explore Services
               </Link>
             </div>
           </ScrollReveal>
+
           <ScrollReveal delay={4}>
-            <div className="hero-badges">
-              {heroContent.countries.map((country) => (
-                <div className="hero-badge" key={country.name}>
-                  <span className="hero-badge-flag">{country.flag}</span>
-                  {country.name}
+            <div className="hero-countries">
+              <span className="hero-countries-label">PRESENCE</span>
+              {heroContent.countries.map((country, idx) => (
+                <div className="hero-country" key={country.name}>
+                  <span>{country.flag}</span>
+                  <span>{country.name}</span>
+                  {idx < heroContent.countries.length - 1 && <span className="hero-country-dot" />}
                 </div>
               ))}
             </div>
           </ScrollReveal>
         </div>
+
         <div className="hero-visual">
-          <div className="hero-logo-container">
-            <div className="hero-logo-glow" />
-            <Image
-              src="/images/logo.png"
-              alt="Grand Dust Global Ventures - Golden Griffin Logo"
-              width={320}
-              height={320}
-              priority
-              style={{ objectFit: "contain", position: "relative", zIndex: 2 }}
-            />
-            <div className="hero-founder">
+          <ScrollReveal animation="reveal-right">
+            <div className="hero-founder-block">
               <p className="hero-founder-label">{siteConfig.founderTitle}</p>
-              <p
-                className="hero-founder-name"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
+              <p className="hero-founder-name" style={{ fontFamily: "var(--font-heading)" }}>
                 {siteConfig.founder}
               </p>
+              <div className="gold-line" />
+              <p className="hero-founder-locations">
+                Coimbatore &bull; Mumbai &bull; Kuala Lumpur &bull; USA
+              </p>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
@@ -113,7 +118,7 @@ function TrustBar() {
     <section className="trust-bar" id="trust-bar">
       <div className="trust-bar-grid">
         {trustBadges.map((badge, i) => (
-          <ScrollReveal key={badge.title} delay={i + 1 > 5 ? 5 : (i + 1) as 1|2|3|4|5}>
+          <ScrollReveal key={badge.title} delay={i + 1 > 5 ? 5 : ((i + 1) as 1 | 2 | 3 | 4 | 5)}>
             <div className="trust-item">
               <div className="trust-icon">{badge.icon}</div>
               <div className="trust-text">
@@ -149,7 +154,9 @@ function ServicesSection() {
               End-to-end financial and asset solutions tailored to help you grow, secure, and
               prosper.
             </p>
-            <div className="gold-divider gold-divider-center" />
+            <div className="gold-divider gold-divider-center">
+              <div className="gold-divider-diamond" />
+            </div>
           </div>
         </ScrollReveal>
 
@@ -157,7 +164,7 @@ function ServicesSection() {
           {services.map((service, i) => (
             <ScrollReveal
               key={service.id}
-              delay={i + 1 > 5 ? 5 : ((i + 1) as 1|2|3|4|5)}
+              delay={i + 1 > 5 ? 5 : ((i + 1) as 1 | 2 | 3 | 4 | 5)}
             >
               <Link
                 href={`/services/${service.slug}`}
@@ -190,7 +197,7 @@ function ServicesSection() {
                       ))}
                     </ul>
                     <span className="service-card-link">
-                      Learn More →
+                      Learn More &rarr;
                     </span>
                   </div>
                 </div>
@@ -222,6 +229,7 @@ function WhyChooseUs() {
                 <br />
                 முடிவுகளால் இயக்கப்படுகிறது.
               </h3>
+              <div className="gold-line" />
               <p>
                 At Grand Dust Global Ventures, we combine expertise with integrity to deliver
                 unmatched financial solutions. With over a decade of experience and a presence
@@ -232,7 +240,7 @@ function WhyChooseUs() {
                 ஒப்பற்ற நிதி தீர்வுகளை வழங்குகிறோம்.
               </p>
               <Link href="/about" className="btn btn-outline">
-                Know More About Us →
+                Know More About Us &rarr;
               </Link>
             </div>
           </ScrollReveal>
@@ -266,7 +274,6 @@ function AnimatedCounter({ value }: { value: string }) {
     hasAnimated.current = true;
     const el = ref.current;
 
-    // Extract numeric part
     const numMatch = value.match(/[\d,]+/);
     if (!numMatch) {
       el.textContent = value;
@@ -341,7 +348,9 @@ function ProcessStepsSection() {
             <p className="section-subtitle">
               From application to approval — we make it easy.
             </p>
-            <div className="gold-divider gold-divider-center" />
+            <div className="gold-divider gold-divider-center">
+              <div className="gold-divider-diamond" />
+            </div>
           </div>
         </ScrollReveal>
 
@@ -349,7 +358,7 @@ function ProcessStepsSection() {
           {processSteps.map((step, i) => (
             <ScrollReveal
               key={step.number}
-              delay={i + 1 > 5 ? 5 : ((i + 1) as 1|2|3|4|5)}
+              delay={i + 1 > 5 ? 5 : ((i + 1) as 1 | 2 | 3 | 4 | 5)}
             >
               <div className="process-step">
                 <div className="process-step-number">
@@ -399,12 +408,13 @@ function AboutPreview() {
                 <br />
                 எதிர்காலத்திற்கான பார்வை.
               </h3>
+              <div className="gold-line" />
               <p>{aboutContent.story}</p>
               <p className="tamil" style={{ fontFamily: "var(--font-tamil)" }}>
                 {aboutContent.storyTamil}
               </p>
-              <Link href="/about" className="btn btn-primary">
-                Read Our Story →
+              <Link href="/about" className="btn btn-primary" style={{ marginTop: "16px" }}>
+                Read Our Story &rarr;
               </Link>
             </div>
           </ScrollReveal>
@@ -431,7 +441,9 @@ function GlobalPresence() {
             >
               உலகளாவிய எல்லை. உள்ளூர் நிபுணத்துவம்.
             </p>
-            <div className="gold-divider gold-divider-center" />
+            <div className="gold-divider gold-divider-center">
+              <div className="gold-divider-diamond" />
+            </div>
           </div>
         </ScrollReveal>
 
@@ -439,7 +451,7 @@ function GlobalPresence() {
           {locations.map((loc, i) => (
             <ScrollReveal
               key={loc.city}
-              delay={i + 1 > 5 ? 5 : ((i + 1) as 1|2|3|4|5)}
+              delay={i + 1 > 5 ? 5 : ((i + 1) as 1 | 2 | 3 | 4 | 5)}
             >
               <div className="presence-card">
                 <div className="presence-card-image">
@@ -487,7 +499,9 @@ function TestimonialsSection() {
             >
               நூற்றுக்கணக்கான வாடிக்கையாளர்களின் நம்பிக்கை
             </p>
-            <div className="gold-divider gold-divider-center" />
+            <div className="gold-divider gold-divider-center">
+              <div className="gold-divider-diamond" />
+            </div>
           </div>
         </ScrollReveal>
 
@@ -495,7 +509,7 @@ function TestimonialsSection() {
           {testimonials.map((t, i) => (
             <ScrollReveal
               key={t.name}
-              delay={i + 1 > 5 ? 5 : ((i + 1) as 1|2|3|4|5)}
+              delay={i + 1 > 5 ? 5 : ((i + 1) as 1 | 2 | 3 | 4 | 5)}
             >
               <div className="testimonial-card">
                 <div className="testimonial-stars">
@@ -537,7 +551,7 @@ function ContactCTA() {
             </p>
             <div className="contact-cta-buttons">
               <Link href="/contact" className="btn btn-primary">
-                Get in Touch →
+                Schedule Consultation &rarr;
               </Link>
               <a
                 href={`tel:${siteConfig.phone}`}

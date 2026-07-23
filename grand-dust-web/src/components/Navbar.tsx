@@ -42,8 +42,8 @@ export function Navbar() {
             <Image
               src="/images/logo.png"
               alt="Grand Dust Global Ventures Griffin Logo"
-              width={48}
-              height={48}
+              width={56}
+              height={56}
               priority
               style={{ objectFit: "contain" }}
             />
@@ -51,7 +51,7 @@ export function Navbar() {
               <span className="navbar-logo-title" style={{ fontFamily: "var(--font-heading)" }}>
                 GRAND DUST
               </span>
-              <span className="navbar-logo-sub">Global Ventures</span>
+              <span className="navbar-logo-sub">GLOBAL VENTURES</span>
             </div>
           </Link>
 

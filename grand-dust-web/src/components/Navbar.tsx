@@ -41,18 +41,12 @@ export function Navbar() {
           <Link href="/" className="navbar-logo" aria-label="Grand Dust Global Ventures Home">
             <Image
               src="/images/logo.png"
-              alt="Grand Dust Global Ventures Griffin Logo"
-              width={56}
-              height={56}
+              alt="Grand Dust Global Ventures"
+              width={160}
+              height={54}
               priority
-              style={{ objectFit: "contain" }}
+              style={{ objectFit: "contain", height: "54px", width: "auto" }}
             />
-            <div className="navbar-logo-text">
-              <span className="navbar-logo-title" style={{ fontFamily: "var(--font-heading)" }}>
-                GRAND DUST
-              </span>
-              <span className="navbar-logo-sub">GLOBAL VENTURES</span>
-            </div>
           </Link>
 
           <div className="navbar-links">

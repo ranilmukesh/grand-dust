@@ -85,6 +85,7 @@ function Hero() {
           <ScrollReveal>
             <p className="hero-tagline">{heroContent.tagline}</p>
           </ScrollReveal>
+
           <ScrollReveal delay={1}>
             <h1 className="hero-title" style={{ fontFamily: "var(--font-heading)" }}>
               {heroContent.title}
@@ -99,12 +100,6 @@ function Hero() {
               <div className="hero-divider-diamond" />
               <div className="hero-divider-line" />
             </div>
-            <p className="hero-description">{heroContent.description}</p>
-
-            <div className="hero-tamil-divider" />
-            <p className="hero-description-tamil" style={{ fontFamily: "var(--font-tamil)" }}>
-              {heroContent.descriptionTamil}
-            </p>
           </ScrollReveal>
 
           <ScrollReveal delay={3}>
@@ -143,21 +138,28 @@ function Hero() {
             </div>
           </ScrollReveal>
         </div>
+      </div>
+    </section>
+  );
+}
 
-        <div className="hero-visual">
-          <ScrollReveal animation="reveal-right">
-            <div className="hero-founder-block">
-              <p className="hero-founder-label">{siteConfig.founderTitle}</p>
-              <p className="hero-founder-name" style={{ fontFamily: "var(--font-heading)" }}>
-                {siteConfig.founder}
-              </p>
-              <div className="gold-line" />
-              <p className="hero-founder-locations">
-                Coimbatore &bull; Mumbai &bull; Kuala Lumpur &bull; USA
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
+/* ==================== OVERVIEW BANNER (NEXT SCROLL SECTION) ==================== */
+function OverviewBanner() {
+  return (
+    <section className="hero-overview-banner" id="overview-banner">
+      <div className="container">
+        <ScrollReveal>
+          <div className="hero-overview-content">
+            <p className="hero-overview-label">OUR CORE CAPABILITIES</p>
+            <h2 className="hero-overview-text-en" style={{ fontFamily: "var(--font-heading)" }}>
+              Structured finance, property-backed lending, real estate advisory, gold, silver, diamond investments, and strategic wealth solutions.
+            </h2>
+            <div className="hero-overview-divider" />
+            <p className="hero-overview-text-ta" style={{ fontFamily: "var(--font-tamil)" }}>
+              கட்டமைக்கப்பட்ட நிதி, சொத்து அடிப்படையிலான கடன், ரியல் எஸ்டேட் ஆலோசனை, தங்கம், வெள்ளி, வைர முதலீடுகள் மற்றும் மூலோபாய செல்வ தீர்வுகள்.
+            </p>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
@@ -623,6 +625,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <OverviewBanner />
       <TrustBar />
       <ServicesSection />
       <WhyChooseUs />

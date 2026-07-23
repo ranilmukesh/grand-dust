@@ -1,6 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig, services, locations } from "@/lib/content";
+import {
+  PhoneIcon,
+  MailIcon,
+  GlobeIcon,
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  YoutubeIcon,
+} from "@/components/Icons";
 
 export function Footer() {
   return (
@@ -26,10 +35,10 @@ export function Footer() {
                 உலகின் மிக உயர்ந்த நிதி ஆலோசனை. செல்வத்தை மேம்படுத்துதல். எதிர்காலத்தை கட்டமைத்தல்.
               </p>
               <div className="footer-social">
-                <a href="#" aria-label="Facebook" id="social-facebook">📘</a>
-                <a href="#" aria-label="Instagram" id="social-instagram">📸</a>
-                <a href="#" aria-label="LinkedIn" id="social-linkedin">💼</a>
-                <a href="#" aria-label="YouTube" id="social-youtube">🎬</a>
+                <a href="#" aria-label="Facebook" id="social-facebook"><FacebookIcon size={16} /></a>
+                <a href="#" aria-label="Instagram" id="social-instagram"><InstagramIcon size={16} /></a>
+                <a href="#" aria-label="LinkedIn" id="social-linkedin"><LinkedinIcon size={16} /></a>
+                <a href="#" aria-label="YouTube" id="social-youtube"><YoutubeIcon size={16} /></a>
               </div>
             </div>
 
@@ -67,19 +76,19 @@ export function Footer() {
             <div className="footer-column">
               <h4>Contact Us</h4>
               <div className="footer-contact-item">
-                <span className="footer-contact-icon">📞</span>
+                <span className="footer-contact-icon"><PhoneIcon size={16} /></span>
                 <span>
                   <a href={`tel:${siteConfig.phone}`}>{siteConfig.phone}</a>
                 </span>
               </div>
               <div className="footer-contact-item">
-                <span className="footer-contact-icon">✉️</span>
+                <span className="footer-contact-icon"><MailIcon size={16} /></span>
                 <span>
                   <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
                 </span>
               </div>
               <div className="footer-contact-item">
-                <span className="footer-contact-icon">🌍</span>
+                <span className="footer-contact-icon"><GlobeIcon size={16} /></span>
                 <span>{siteConfig.locations.join(" • ")}</span>
               </div>
             </div>

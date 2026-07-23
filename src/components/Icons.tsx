@@ -329,3 +329,63 @@ export function YoutubeIcon({ className = "", size = 16 }: { className?: string;
     </svg>
   );
 }
+
+export function IndiaFlag({ size = 20, className = "" }: { size?: number; className?: string }) {
+  return (
+    <svg width={size} height={Math.round(size * 0.7)} viewBox="0 0 30 20" fill="none" className={className} style={{ borderRadius: "2px", overflow: "hidden", display: "inline-block", verticalAlign: "middle" }}>
+      <rect width="30" height="6.67" fill="#FF9933" />
+      <rect y="6.67" width="30" height="6.67" fill="#FFFFFF" />
+      <rect y="13.34" width="30" height="6.66" fill="#138808" />
+      <circle cx="15" cy="10" r="2.2" fill="none" stroke="#000080" strokeWidth="0.6" />
+      <circle cx="15" cy="10" r="0.4" fill="#000080" />
+    </svg>
+  );
+}
+
+export function MalaysiaFlag({ size = 20, className = "" }: { size?: number; className?: string }) {
+  return (
+    <svg width={size} height={Math.round(size * 0.7)} viewBox="0 0 30 20" fill="none" className={className} style={{ borderRadius: "2px", overflow: "hidden", display: "inline-block", verticalAlign: "middle" }}>
+      {/* 14 Red and White stripes */}
+      <rect width="30" height="20" fill="#CC0000" />
+      <rect y="1.43" width="30" height="1.43" fill="#FFFFFF" />
+      <rect y="4.29" width="30" height="1.43" fill="#FFFFFF" />
+      <rect y="7.14" width="30" height="1.43" fill="#FFFFFF" />
+      <rect y="10.0" width="30" height="1.43" fill="#FFFFFF" />
+      <rect y="12.86" width="30" height="1.43" fill="#FFFFFF" />
+      <rect y="15.71" width="30" height="1.43" fill="#FFFFFF" />
+      <rect y="18.57" width="30" height="1.43" fill="#FFFFFF" />
+      {/* Blue canton */}
+      <rect width="15" height="11.43" fill="#000066" />
+      {/* Yellow crescent and star */}
+      <circle cx="6.5" cy="5.7" r="3.2" fill="#FFCC00" />
+      <circle cx="7.8" cy="5.7" r="2.7" fill="#000066" />
+      <polygon points="10.5,5.7 11.2,4.2 11.9,5.7 13.4,5.7 12.2,6.6 12.6,8.1 11.4,7.2 10.2,8.1 10.6,6.6 9.4,5.7" fill="#FFCC00" />
+    </svg>
+  );
+}
+
+export function USAFlag({ size = 20, className = "" }: { size?: number; className?: string }) {
+  return (
+    <svg width={size} height={Math.round(size * 0.7)} viewBox="0 0 30 20" fill="none" className={className} style={{ borderRadius: "2px", overflow: "hidden", display: "inline-block", verticalAlign: "middle" }}>
+      {/* 13 Red and White stripes */}
+      <rect width="30" height="20" fill="#B22234" />
+      <rect y="1.54" width="30" height="1.54" fill="#FFFFFF" />
+      <rect y="4.62" width="30" height="1.54" fill="#FFFFFF" />
+      <rect y="7.69" width="30" height="1.54" fill="#FFFFFF" />
+      <rect y="10.77" width="30" height="1.54" fill="#FFFFFF" />
+      <rect y="13.85" width="30" height="1.54" fill="#FFFFFF" />
+      <rect y="16.92" width="30" height="1.54" fill="#FFFFFF" />
+      {/* Blue canton */}
+      <rect width="12" height="10.77" fill="#3C3B6E" />
+      {/* Stars representation */}
+      <circle cx="3" cy="2.5" r="0.6" fill="#FFFFFF" />
+      <circle cx="6" cy="2.5" r="0.6" fill="#FFFFFF" />
+      <circle cx="9" cy="2.5" r="0.6" fill="#FFFFFF" />
+      <circle cx="4.5" cy="5.4" r="0.6" fill="#FFFFFF" />
+      <circle cx="7.5" cy="5.4" r="0.6" fill="#FFFFFF" />
+      <circle cx="3" cy="8.3" r="0.6" fill="#FFFFFF" />
+      <circle cx="6" cy="8.3" r="0.6" fill="#FFFFFF" />
+      <circle cx="9" cy="8.3" r="0.6" fill="#FFFFFF" />
+    </svg>
+  );
+}

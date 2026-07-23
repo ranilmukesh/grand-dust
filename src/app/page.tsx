@@ -19,7 +19,23 @@ import {
   CoinsIcon,
   ConsultIcon,
   CheckCircleIcon,
+  IndiaFlag,
+  MalaysiaFlag,
+  USAFlag,
 } from "@/components/Icons";
+
+function getCountryFlag(name: string) {
+  switch (name) {
+    case "India":
+      return <IndiaFlag size={20} />;
+    case "Malaysia":
+      return <MalaysiaFlag size={20} />;
+    case "USA":
+      return <USAFlag size={20} />;
+    default:
+      return null;
+  }
+}
 import {
   heroContent,
   trustBadges,
@@ -130,7 +146,7 @@ function Hero() {
               <span className="hero-countries-label">PRESENCE</span>
               {heroContent.countries.map((country, idx) => (
                 <div className="hero-country" key={country.name}>
-                  <span>{country.flag}</span>
+                  {getCountryFlag(country.name)}
                   <span>{country.name}</span>
                   {idx < heroContent.countries.length - 1 && <span className="hero-country-dot" />}
                 </div>

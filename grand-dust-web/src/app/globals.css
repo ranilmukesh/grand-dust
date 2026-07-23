@@ -418,7 +418,12 @@ ul, ol {
   align-items: center;
   gap: 14px;
   z-index: 1001;
-  min-width: 220px;
+}
+
+.navbar-logo img {
+  height: 56px !important;
+  width: auto !important;
+  max-width: 240px;
 }
 
 .navbar-logo-text {
@@ -2087,6 +2092,10 @@ ul, ol {
 
   .navbar { height: 72px; }
   .navbar.scrolled { height: 68px; }
+
+  .navbar-logo img {
+    height: 48px !important;
+  }
 
   .services-grid { grid-template-columns: 1fr; }
   .trust-bar-grid { grid-template-columns: repeat(2, 1fr); }

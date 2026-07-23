@@ -11,7 +11,7 @@ export const siteConfig = {
   founderTitle: "Founder & Chairman",
   founderTitleTamil: "நிறுவனர் & தலைவர்",
   locations: ["Coimbatore", "Mumbai", "Kuala Lumpur", "USA"],
-  url: "https://granddustglobal.com",
+  url: "https://grand-dust.netlify.app",
 };
 
 export const navigation = [
@@ -23,19 +23,27 @@ export const navigation = [
 ];
 
 export const heroContent = {
-  tagline: "GRAND DUST GLOBAL VENTURES",
-  title: "Building Wealth.",
+  tagline: "COIMBATORE'S MOST ELITE FINANCIAL ADVISORY",
+  title: "Building Wealth in Coimbatore.",
   titleAccent: "Preserving Legacies.",
   description:
-    "Structured finance, property-backed lending,\nreal estate advisory, gold, silver,\ndiamond investments\nand strategic wealth solutions.",
+    "Structured finance, property-backed lending,\nreal estate advisory, gold, silver,\ndiamond investments\nand strategic wealth solutions in Coimbatore.",
   descriptionTamil:
-    "கட்டமைக்கப்பட்ட நிதி, சொத்து அடிப்படையிலான கடன்,\nரியல் எஸ்டேட் ஆலோசனை, தங்கம், வெள்ளி,\nவைர முதலீடுகள்\nமற்றும் மூலோபாய செல்வ தீர்வுகள்.",
+    "கட்டமைக்கப்பட்ட நிதி, சொத்து அடிப்படையிலான கடன்,\nரியல் எஸ்டேட் ஆலோசனை, தங்கம், வெள்ளி,\nவைர முதலீடுகள்\nமற்றும் கோயம்புத்தூரில் மூலோபாய செல்வ தீர்வுகள்.",
   countries: [
     { flag: "🇮🇳", name: "India" },
     { flag: "🇲🇾", name: "Malaysia" },
     { flag: "🇺🇸", name: "USA" },
   ],
 };
+
+export const cbeAreas = [
+  { slug: "rs-puram", name: "RS Puram" },
+  { slug: "peelamedu", name: "Peelamedu" },
+  { slug: "saravanampatti", name: "Saravanampatti" },
+  { slug: "gandhipuram", name: "Gandhipuram" },
+  { slug: "vadavalli", name: "Vadavalli" }
+];
 
 export const trustBadges = [
   {
@@ -80,7 +88,7 @@ export const services = [
     id: "finance-mortgage",
     iconKey: "home",
     image: "/images/service-finance.png",
-    title: "Finance & Mortgage Loans",
+    title: "Finance & Land Mortgage Loans in Coimbatore",
     titleTamil: "நிதி & அடமான கடன்",
     features: [
       "Loan Against Property (Residential / Commercial)",
@@ -99,8 +107,8 @@ export const services = [
     descriptionTamil:
       "தெளிவான சொத்தின் மேல் கடன்கள் வழங்கப்படும். சொத்தின் 50% சந்தை மதிப்பு அடிப்படைக் கடனாக வழங்கப்படும். கவர்ச்சிகரமான வட்டி விகிதங்கள். எளிய நடைமுறை மூலம் விரைவான கடன் வழங்கல்.",
     slug: "finance-mortgage",
-    metaTitle: "Best Loan Against Property in Coimbatore | Grand Dust Global Ventures",
-    metaDescription: "Get loans against property up to 50% market value with attractive interest rates. Best mortgage loan company in Coimbatore. Quick approvals, minimal documentation.",
+    metaTitle: "Best Land Mortgage Loan in Coimbatore | Grand Dust",
+    metaDescription: "Grand Dust offers the best land mortgage loan in Coimbatore. Get up to 50% market value for your property with immediate approvals and simple documentation.",
     faqs: [
       {
         q: "What is the maximum loan amount available?",
@@ -122,8 +130,8 @@ export const services = [
   {
     id: "real-estate",
     iconKey: "building",
-    image: "/images/service-realestate.png",
-    title: "Real Estate Transactions",
+    image: "/images/best-real-estate-company-coimbatore.png",
+    title: "Real Estate Transactions in Coimbatore",
     titleTamil: "ரியல் எஸ்டேட் பரிவர்த்தனைகள்",
     features: [
       "Land Buying & Selling",
@@ -143,7 +151,7 @@ export const services = [
       "நிலம் வாங்குதல் மற்றும் விற்றல் பரிவர்த்தனைகளை சரிபார்க்கப்பட்ட சொத்துக்களுடன் சிறந்த சந்தை மதிப்பில் செய்து தருகிறோம். சொத்து அடையாளம் காணுதல் முதல் பதிவு வரை முழுமையான ஆதரவு வழங்குகிறோம்.",
     slug: "real-estate",
     metaTitle: "Best Real Estate Company in Coimbatore | Land Buying & Selling",
-    metaDescription: "Premier real estate services in Coimbatore. Verified properties, best market value, and complete end-to-end support for land buying and selling transactions.",
+    metaDescription: "Grand Dust is the best real estate company in Coimbatore. Verified properties, exact market value, and end-to-end support for land buying and selling.",
     faqs: [
       {
         q: "Do you deal in both residential and commercial properties?",
@@ -161,7 +169,7 @@ export const services = [
     id: "gold-silver",
     iconKey: "gold",
     image: "/images/service-gold.png",
-    title: "Gold & Silver Operations",
+    title: "Gold & Silver Operations in Coimbatore",
     titleTamil: "தங்கம் & வெள்ளி சேவைகள்",
     features: [
       "Custom Gold & Silver Jewelry Made to Order",
@@ -180,8 +188,8 @@ export const services = [
     descriptionTamil:
       "ஆர்டர் அடிப்படையில் தங்கம் & வெள்ளி நகை தயாரித்தல், அடமானம் வைப்பதற்கு ஏற்பாடு செய்தல், நகை அடமானத்தில் இருக்கும் நகையை மீட்டு நல்ல விலை தருதல், தங்கத்தை உயர்ந்த சந்தை விலையில் வாங்குதல் ஆகிய சேவைகளை வழங்குகிறோம்.",
     slug: "gold-silver",
-    metaTitle: "Best Gold Loan & Jewelry Services in Coimbatore | Grand Dust",
-    metaDescription: "Custom gold & silver jewelry, gold pledge arrangements, jewelry redemption at best prices. Trusted gold operations in Coimbatore with transparent pricing.",
+    metaTitle: "Best Gold Loan in Coimbatore | Grand Dust",
+    metaDescription: "Get the best gold loan in Coimbatore with the highest per-gram valuation and instant cash disbursement. Easy redemption options and flexible interest rates.",
     faqs: [
       {
         q: "Can I get custom jewelry made to order?",

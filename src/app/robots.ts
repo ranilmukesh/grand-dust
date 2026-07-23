@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: "https://granddustglobal.com/sitemap.xml",
+    sitemap: "https://grand-dust.netlify.app/sitemap.xml",
   };
 }

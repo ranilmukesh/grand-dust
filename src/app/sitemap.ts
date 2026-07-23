@@ -1,7 +1,8 @@
 import { MetadataRoute } from "next";
+import { cbeAreas } from "@/lib/content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://granddustglobal.com";
+  const baseUrl = "https://grand-dust.netlify.app";
 
   const services = [
     "finance-mortgage",
@@ -41,6 +42,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    // Coimbatore Dominance Routes
+    {
+      url: `${baseUrl}/coimbatore`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1.0,
+    },
+    {
+      url: `${baseUrl}/coimbatore/real-estate`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/coimbatore/gold-loan`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/coimbatore/land-mortgage-loan`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
   ];
 
   const servicePages: MetadataRoute.Sitemap = services.map((slug) => ({
@@ -50,5 +76,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [...staticPages, ...servicePages];
+  const coimbatoreAreaPages: MetadataRoute.Sitemap = cbeAreas.map((area) => ({
+    url: `${baseUrl}/coimbatore/areas/${area.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
+  }));
+
+  return [...staticPages, ...servicePages, ...coimbatoreAreaPages];
 }

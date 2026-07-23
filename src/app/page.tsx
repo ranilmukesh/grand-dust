@@ -104,9 +104,9 @@ function Hero() {
 
           <ScrollReveal delay={1}>
             <h1 className="hero-title" style={{ fontFamily: "var(--font-heading)" }}>
-              {heroContent.title}
+              Best Financial Advisory &
               <br />
-              <span className="hero-title-accent">{heroContent.titleAccent}</span>
+              <span className="hero-title-accent">Real Estate Company in Coimbatore</span>
             </h1>
           </ScrollReveal>
 
@@ -230,14 +230,24 @@ function ServicesSection() {
         </ScrollReveal>
 
         <div className="services-grid">
-          {services.map((service, i) => (
-            <ScrollReveal
-              key={service.id}
-              delay={i + 1 > 5 ? 5 : ((i + 1) as 1 | 2 | 3 | 4 | 5)}
-            >
-              <Link
-                href={`/services/${service.slug}`}
-                style={{ textDecoration: "none", color: "inherit" }}
+          {services.map((service, i) => {
+            let localUrl = `/services/${service.slug}`;
+            let localCtaText = "";
+            if (service.id === "gold-silver") {
+              localUrl = "/coimbatore/gold-loan";
+              localCtaText = "Best gold loan in Coimbatore – Know more";
+            } else if (service.id === "real-estate") {
+              localUrl = "/coimbatore/real-estate";
+              localCtaText = "Best real estate company in Coimbatore – Know more";
+            } else if (service.id === "finance-mortgage") {
+              localUrl = "/coimbatore/land-mortgage-loan";
+              localCtaText = "Best land mortgage loan in Coimbatore – Know more";
+            }
+
+            return (
+              <ScrollReveal
+                key={service.id}
+                delay={i + 1 > 5 ? 5 : ((i + 1) as 1 | 2 | 3 | 4 | 5)}
               >
                 <div className="service-card" id={`service-card-${service.id}`}>
                   <div className="service-card-image">
@@ -265,14 +275,23 @@ function ServicesSection() {
                         <li key={j}>{feature}</li>
                       ))}
                     </ul>
-                    <span className="service-card-link">
-                      Learn More &rarr;
-                    </span>
+                    {localCtaText && (
+                      <Link
+                        href={localUrl}
+                        className="service-card-link"
+                        style={{ color: "var(--gold)", fontWeight: "600", marginBottom: "12px", display: "inline-flex" }}
+                      >
+                        {localCtaText} &rarr;
+                      </Link>
+                    )}
+                    <Link href={`/services/${service.slug}`} className="service-card-link" style={{ opacity: 0.8, fontSize: "0.85rem" }}>
+                      General Service Details &rarr;
+                    </Link>
                   </div>
                 </div>
-              </Link>
-            </ScrollReveal>
-          ))}
+              </ScrollReveal>
+            );
+          })}
         </div>
       </div>
     </section>

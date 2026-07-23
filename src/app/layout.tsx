@@ -26,50 +26,43 @@ const notoTamil = Noto_Sans_Tamil({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://granddustglobal.com"),
+  metadataBase: new URL("https://grand-dust.netlify.app"),
   title: {
     default: "Grand Dust Global Ventures | Best Financial Advisory & Real Estate in Coimbatore",
-    template: "%s | Grand Dust Global Ventures",
+    template: "%s | Grand Dust – Coimbatore",
   },
   description:
-    "Grand Dust Global Ventures — The World's Most Elite Financial Advisory. Best real estate company in Coimbatore offering loans against property, gold & silver operations, diamond trade, and land transactions across India, Malaysia & USA.",
+    "Grand Dust Global Ventures is the premier financial advisory and real estate company in Coimbatore. We offer the best gold loans, land mortgage loans, and secure diamond trading.",
   keywords: [
     "best real estate company coimbatore",
     "best gold loan in coimbatore",
-    "best land mortgage loan",
+    "best land mortgage loan coimbatore",
     "loan against property coimbatore",
-    "property mortgage loan coimbatore",
     "diamond trade india",
-    "gold jewelry coimbatore",
-    "Grand Dust Global Ventures",
-    "financial advisory coimbatore",
-    "gold pledge coimbatore",
-    "real estate coimbatore",
-    "land buying selling coimbatore",
+    "best financial advisory in coimbatore"
   ],
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://granddustglobal.com",
+    url: "https://grand-dust.netlify.app",
     siteName: "Grand Dust Global Ventures",
-    title: "Grand Dust Global Ventures | Elite Financial Advisory",
-    description:
-      "Empowering your wealth with trusted financial solutions. Loans, real estate, precious metals & diamonds — all under one roof.",
+    title: "Best Real Estate & Gold Loan Company in Coimbatore",
+    description: "Looking for the best land mortgage loan or real estate services? Grand Dust offers the best gold loan in Coimbatore and property-backed finance under one roof.",
     images: [
       {
-        url: "/images/logo.png",
+        url: "/images/logo-coimbatore.png",
         width: 1200,
         height: 630,
-        alt: "Grand Dust Global Ventures Logo",
+        alt: "Grand Dust Global Ventures - Best Real Estate Company Coimbatore",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Grand Dust Global Ventures | Elite Financial Advisory",
+    title: "Best Real Estate & Gold Loan Company in Coimbatore",
     description:
-      "Best real estate, gold loan, and financial advisory services in Coimbatore. Global presence in India, Malaysia & USA.",
-    images: ["/images/logo.png"],
+      "Looking for the best land mortgage loan or real estate services? Grand Dust offers the best gold loan in Coimbatore and property-backed finance under one roof.",
+    images: ["/images/logo-coimbatore.png"],
   },
   robots: {
     index: true,
@@ -83,7 +76,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://granddustglobal.com",
+    canonical: "/",
   },
   icons: {
     icon: "/favicon.ico",
@@ -98,16 +91,16 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://granddustglobal.com/#organization",
+      "@id": "https://grand-dust.netlify.app/#organization",
       name: "Grand Dust Global Ventures",
       alternateName: "Grand Dust",
-      url: "https://granddustglobal.com",
+      url: "https://grand-dust.netlify.app",
       logo: {
         "@type": "ImageObject",
-        url: "https://granddustglobal.com/images/logo.png",
+        url: "https://grand-dust.netlify.app/images/logo.png",
       },
       description:
-        "The World's Most Elite Financial Advisory — offering loans against property, real estate transactions, gold & silver operations, and diamond trade across India, Malaysia & USA.",
+        "Grand Dust Global Ventures is the premier financial advisory and real estate company in Coimbatore. We offer the best gold loans, land mortgage loans, and secure diamond trading.",
       founder: {
         "@type": "Person",
         name: "Guruprasad",
@@ -119,7 +112,7 @@ const jsonLd = {
           telephone: "+91-9043425551",
           contactType: "customer service",
           email: "guru25551@gmail.com",
-          areaServed: ["IN", "MY", "US"],
+          areaServed: ["Coimbatore", "Tamil Nadu", "India"],
           availableLanguage: ["English", "Tamil"],
         },
       ],
@@ -150,23 +143,23 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://granddustglobal.com/#website",
-      url: "https://granddustglobal.com",
+      "@id": "https://grand-dust.netlify.app/#website",
+      url: "https://grand-dust.netlify.app",
       name: "Grand Dust Global Ventures",
       description: "The World's Most Elite Financial Advisory",
       publisher: {
-        "@id": "https://granddustglobal.com/#organization",
+        "@id": "https://grand-dust.netlify.app/#organization",
       },
       inLanguage: ["en", "ta"],
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://granddustglobal.com/#localbusiness",
+      "@id": "https://grand-dust.netlify.app/#localbusiness",
       name: "Grand Dust Global Ventures",
-      image: "https://granddustglobal.com/images/logo.png",
+      image: "https://grand-dust.netlify.app/images/logo-coimbatore.png",
       telephone: "+91-9043425551",
       email: "guru25551@gmail.com",
-      url: "https://granddustglobal.com",
+      url: "https://grand-dust.netlify.app",
       priceRange: "$$$$",
       address: {
         "@type": "PostalAddress",
@@ -179,11 +172,7 @@ const jsonLd = {
         latitude: 11.0168,
         longitude: 76.9558,
       },
-      areaServed: [
-        { "@type": "Country", name: "India" },
-        { "@type": "Country", name: "Malaysia" },
-        { "@type": "Country", name: "United States" },
-      ],
+      areaServed: ["Coimbatore", "Tamil Nadu", "India"],
       serviceType: [
         "Financial Advisory",
         "Loan Against Property",

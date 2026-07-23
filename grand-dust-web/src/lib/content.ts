@@ -39,35 +39,35 @@ export const heroContent = {
 
 export const trustBadges = [
   {
-    icon: "🛡️",
+    iconKey: "shield",
     title: "Trusted Expertise",
     titleTamil: "நம்பகமான நிபுணத்துவம்",
     desc: "Years of experience you can rely on",
     descTamil: "நம்பகமான அனுபவம்",
   },
   {
-    icon: "🔒",
+    iconKey: "lock",
     title: "Secure & Transparent",
     titleTamil: "பாதுகாப்பான & வெளிப்படையான",
     desc: "Ethical practices with complete transparency",
     descTamil: "முழுமையான வெளிப்படைத்தன்மை",
   },
   {
-    icon: "⚡",
+    iconKey: "zap",
     title: "Quick Approvals",
     titleTamil: "விரைவான அனுமதி",
     desc: "Fast processing, minimal documentation",
     descTamil: "விரைவான செயலாக்கம்",
   },
   {
-    icon: "🤝",
+    iconKey: "user-check",
     title: "Client First Approach",
     titleTamil: "வாடிக்கையாளர் முன்னுரிமை",
     desc: "Personalized solutions for every goal",
     descTamil: "ஒவ்வொரு இலக்கிற்கும் தனிப்பயன் தீர்வுகள்",
   },
   {
-    icon: "🌍",
+    iconKey: "globe",
     title: "Global Presence",
     titleTamil: "உலகளாவிய பரவல்",
     desc: "Serving clients across 4 nations",
@@ -78,7 +78,7 @@ export const trustBadges = [
 export const services = [
   {
     id: "finance-mortgage",
-    icon: "🏠",
+    iconKey: "home",
     image: "/images/service-finance.png",
     title: "Finance & Mortgage Loans",
     titleTamil: "நிதி & அடமான கடன்",
@@ -121,7 +121,7 @@ export const services = [
   },
   {
     id: "real-estate",
-    icon: "🏢",
+    iconKey: "building",
     image: "/images/service-realestate.png",
     title: "Real Estate Transactions",
     titleTamil: "ரியல் எஸ்டேட் பரிவர்த்தனைகள்",
@@ -159,7 +159,7 @@ export const services = [
   },
   {
     id: "gold-silver",
-    icon: "✨",
+    iconKey: "gold",
     image: "/images/service-gold.png",
     title: "Gold & Silver Operations",
     titleTamil: "தங்கம் & வெள்ளி சேவைகள்",
@@ -197,7 +197,7 @@ export const services = [
   },
   {
     id: "diamond-trade",
-    icon: "💎",
+    iconKey: "diamond",
     image: "/images/service-diamond.png",
     title: "Diamond Trade",
     titleTamil: "வைரம் வியாபாரம்",
@@ -238,7 +238,7 @@ export const services = [
 export const processSteps = [
   {
     number: 1,
-    icon: "💬",
+    iconKey: "consult",
     title: "Consultation",
     titleTamil: "ஆலோசனை",
     desc: "Share your needs with our experts",
@@ -246,7 +246,7 @@ export const processSteps = [
   },
   {
     number: 2,
-    icon: "📋",
+    iconKey: "shield",
     title: "Evaluation",
     titleTamil: "மதிப்பீடு",
     desc: "We assess and verify details",
@@ -254,7 +254,7 @@ export const processSteps = [
   },
   {
     number: 3,
-    icon: "✅",
+    iconKey: "check-circle",
     title: "Approval",
     titleTamil: "அனுமதி",
     desc: "Quick approval with best terms",
@@ -262,7 +262,7 @@ export const processSteps = [
   },
   {
     number: 4,
-    icon: "🎯",
+    iconKey: "coins",
     title: "Disbursement",
     titleTamil: "வழங்கல்",
     desc: "Funds delivered promptly",
@@ -272,25 +272,25 @@ export const processSteps = [
 
 export const stats = [
   {
-    icon: "📅",
+    iconKey: "award",
     number: "10+",
     label: "Years of Excellence",
     labelTamil: "ஆண்டுகள் சிறப்பு",
   },
   {
-    icon: "😊",
+    iconKey: "users",
     number: "500+",
     label: "Happy Clients",
     labelTamil: "மகிழ்ச்சியான வாடிக்கையாளர்கள்",
   },
   {
-    icon: "💰",
+    iconKey: "coins",
     number: "₹500 Cr+",
     label: "Loans Facilitated",
     labelTamil: "கடன்கள் வழங்கப்பட்டுள்ளன",
   },
   {
-    icon: "🌐",
+    iconKey: "globe",
     number: "4",
     label: "Global Locations",
     labelTamil: "உலகளாவிய இருப்பிடங்கள்",

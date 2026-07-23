@@ -573,11 +573,12 @@ ul, ol {
 }
 
 /* ===================================
-   HERO — Private Wealth Firm
+   HERO — Private Wealth Firm (Single Viewport Fold)
    =================================== */
 .hero {
   position: relative;
   min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -612,11 +613,12 @@ ul, ol {
   z-index: 2;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 180px 32px 140px;
+  padding: 108px 32px 40px;
   display: grid;
-  grid-template-columns: 45% 55%;
-  gap: 40px;
+  grid-template-columns: 48% 52%;
+  gap: 32px;
   align-items: center;
+  width: 100%;
 }
 
 .hero-text {
@@ -624,19 +626,19 @@ ul, ol {
 }
 
 .hero-tagline {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 28px;
+  margin-bottom: 14px;
   font-weight: 500;
 }
 
 .hero-title {
-  font-size: var(--text-7xl);
+  font-size: var(--text-5xl);
   font-weight: 400;
-  line-height: 1.05;
-  margin-bottom: 8px;
+  line-height: 1.08;
+  margin-bottom: 6px;
   color: var(--charcoal);
   letter-spacing: -0.02em;
 }
@@ -649,8 +651,8 @@ ul, ol {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin: 32px 0;
-  width: 100px;
+  margin: 16px 0;
+  width: 90px;
 }
 
 .hero-divider-line {
@@ -660,52 +662,52 @@ ul, ol {
 }
 
 .hero-divider-diamond {
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   background: var(--gold);
   transform: rotate(45deg);
 }
 
 .hero-description {
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   color: var(--text-secondary);
-  line-height: 1.9;
+  line-height: 1.6;
   white-space: pre-line;
-  max-width: 400px;
+  max-width: 440px;
 }
 
 .hero-tamil-divider {
-  width: 40px;
+  width: 32px;
   height: 1px;
   background: var(--gold-lighter);
-  margin: 24px 0;
+  margin: 12px 0;
 }
 
 .hero-description-tamil {
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   color: var(--burgundy);
   white-space: pre-line;
-  line-height: 1.8;
-  max-width: 400px;
-  opacity: 0.7;
+  line-height: 1.5;
+  max-width: 440px;
+  opacity: 0.75;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 16px;
-  margin-top: 40px;
+  gap: 14px;
+  margin-top: 24px;
   flex-wrap: wrap;
 }
 
 .hero-countries {
   display: flex;
-  gap: 24px;
-  margin-top: 56px;
+  gap: 18px;
+  margin-top: 28px;
   align-items: center;
 }
 
 .hero-countries-label {
-  font-size: var(--text-xs);
+  font-size: 0.65rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -713,7 +715,7 @@ ul, ol {
 }
 
 .hero-country {
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   color: var(--text-secondary);
   display: flex;
   align-items: center;

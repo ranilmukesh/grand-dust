@@ -5,6 +5,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import {
+  ShieldIcon,
+  LockIcon,
+  ZapIcon,
+  UserCheckIcon,
+  GlobeIcon,
+  HomeFinanceIcon,
+  BuildingIcon,
+  GoldIngotIcon,
+  DiamondIcon,
+  AwardIcon,
+  UsersIcon,
+  CoinsIcon,
+  ConsultIcon,
+  CheckCircleIcon,
+} from "@/components/Icons";
+import {
   heroContent,
   trustBadges,
   services,
@@ -15,6 +31,41 @@ import {
   testimonials,
   siteConfig,
 } from "@/lib/content";
+
+function getIconComponent(iconKey: string) {
+  switch (iconKey) {
+    case "shield":
+      return <ShieldIcon size={20} />;
+    case "lock":
+      return <LockIcon size={20} />;
+    case "zap":
+      return <ZapIcon size={20} />;
+    case "user-check":
+      return <UserCheckIcon size={20} />;
+    case "globe":
+      return <GlobeIcon size={20} />;
+    case "home":
+      return <HomeFinanceIcon size={20} />;
+    case "building":
+      return <BuildingIcon size={20} />;
+    case "gold":
+      return <GoldIngotIcon size={20} />;
+    case "diamond":
+      return <DiamondIcon size={20} />;
+    case "award":
+      return <AwardIcon size={22} />;
+    case "users":
+      return <UsersIcon size={22} />;
+    case "coins":
+      return <CoinsIcon size={22} />;
+    case "consult":
+      return <ConsultIcon size={22} />;
+    case "check-circle":
+      return <CheckCircleIcon size={22} />;
+    default:
+      return <ShieldIcon size={20} />;
+  }
+}
 
 /* ==================== HERO ==================== */
 function Hero() {

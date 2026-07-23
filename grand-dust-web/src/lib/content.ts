@@ -23,13 +23,13 @@ export const navigation = [
 ];
 
 export const heroContent = {
-  tagline: "THE WORLD'S MOST",
-  title: "Elite Financial",
-  titleAccent: "Advisory",
+  tagline: "GRAND DUST GLOBAL VENTURES",
+  title: "Building Wealth.",
+  titleAccent: "Preserving Legacies.",
   description:
-    "Empowering your wealth with trusted financial solutions. Loans, real estate, precious metals & diamonds — all under one roof.",
+    "Structured finance, property-backed lending,\nreal estate advisory, gold, silver,\ndiamond investments\nand strategic wealth solutions.",
   descriptionTamil:
-    "நம்பகமான நிதி திர்வுகளுடன் உங்கள் செல்வத்தை உயர்த்துவோம். கடன்கள், ரியல் எஸ்டேட், விலை உயர்ந்த உலோகங்கள் & வைரங்கள் — அனைத்தும் ஒரே கூரையின் கீழ்.",
+    "கட்டமைக்கப்பட்ட நிதி, சொத்து அடிப்படையிலான கடன்,\nரியல் எஸ்டேட் ஆலோசனை, தங்கம், வெள்ளி,\nவைர முதலீடுகள்\nமற்றும் மூலோபாய செல்வ தீர்வுகள்.",
   countries: [
     { flag: "🇮🇳", name: "India" },
     { flag: "🇲🇾", name: "Malaysia" },

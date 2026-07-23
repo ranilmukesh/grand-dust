@@ -42,10 +42,10 @@ export function Navbar() {
             <Image
               src="/images/logo.png"
               alt="Grand Dust Global Ventures"
-              width={220}
-              height={70}
+              width={260}
+              height={80}
               priority
-              style={{ objectFit: "contain", height: "56px", width: "auto" }}
+              style={{ objectFit: "contain", height: "68px", width: "auto" }}
             />
           </Link>
 

@@ -171,7 +171,7 @@ function TrustBar() {
         {trustBadges.map((badge, i) => (
           <ScrollReveal key={badge.title} delay={i + 1 > 5 ? 5 : ((i + 1) as 1 | 2 | 3 | 4 | 5)}>
             <div className="trust-item">
-              <div className="trust-icon">{badge.icon}</div>
+              <div className="trust-icon">{getIconComponent(badge.iconKey)}</div>
               <div className="trust-text">
                 <h4>{badge.title}</h4>
                 <p style={{ fontFamily: "var(--font-tamil)" }}>{badge.titleTamil}</p>
@@ -230,7 +230,7 @@ function ServicesSection() {
                       height={200}
                       style={{ width: "100%", height: "100%", objectFit: "cover" }}
                     />
-                    <div className="service-card-icon">{service.icon}</div>
+                    <div className="service-card-icon">{getIconComponent(service.iconKey)}</div>
                   </div>
                   <div className="service-card-body">
                     <h3 className="service-card-title" style={{ fontFamily: "var(--font-heading)" }}>
@@ -299,7 +299,7 @@ function WhyChooseUs() {
             <div className="stats-grid">
               {stats.map((stat) => (
                 <div className="stat-card" key={stat.label}>
-                  <span className="stat-icon">{stat.icon}</span>
+                  <span className="stat-icon">{getIconComponent(stat.iconKey)}</span>
                   <AnimatedCounter value={stat.number} />
                   <p className="stat-label">{stat.label}</p>
                   <p className="stat-label-tamil" style={{ fontFamily: "var(--font-tamil)" }}>
@@ -413,7 +413,7 @@ function ProcessStepsSection() {
             >
               <div className="process-step">
                 <div className="process-step-number">
-                  <span className="process-step-icon">{step.icon}</span>
+                  <span className="process-step-icon">{getIconComponent(step.iconKey)}</span>
                 </div>
                 <h4 style={{ fontFamily: "var(--font-heading)" }}>{step.title}</h4>
                 <p className="tamil" style={{ fontFamily: "var(--font-tamil)" }}>

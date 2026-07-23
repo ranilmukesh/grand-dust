@@ -3,6 +3,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { services } from "@/lib/content";
+import {
+  HomeFinanceIcon,
+  BuildingIcon,
+  GoldIngotIcon,
+  DiamondIcon,
+  ShieldIcon,
+} from "@/components/Icons";
+
+function getServiceIcon(key: string) {
+  switch (key) {
+    case "home": return <HomeFinanceIcon size={32} />;
+    case "building": return <BuildingIcon size={32} />;
+    case "gold": return <GoldIngotIcon size={32} />;
+    case "diamond": return <DiamondIcon size={32} />;
+    default: return <ShieldIcon size={32} />;
+  }
+}
 
 export const metadata: Metadata = {
   title: "Our Services - Finance, Real Estate, Gold & Diamond",
@@ -59,9 +76,9 @@ export default function ServicesPage() {
                   </div>
                 </div>
                 <div style={{ direction: "ltr" }}>
-                  <span style={{ fontSize: "2rem", display: "block", marginBottom: "12px" }}>
-                    {service.icon}
-                  </span>
+                  <div style={{ color: "var(--gold)", marginBottom: "12px" }}>
+                    {getServiceIcon(service.iconKey)}
+                  </div>
                   <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "1.75rem", marginBottom: "4px" }}>
                     {service.title}
                   </h2>

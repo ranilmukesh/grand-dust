@@ -5,6 +5,23 @@ import Link from "next/link";
 import { services } from "@/lib/content";
 import { FAQSection } from "./FAQSection";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import {
+  HomeFinanceIcon,
+  BuildingIcon,
+  GoldIngotIcon,
+  DiamondIcon,
+  ShieldIcon,
+} from "@/components/Icons";
+
+function getServiceIcon(key: string) {
+  switch (key) {
+    case "home": return <HomeFinanceIcon size={36} />;
+    case "building": return <BuildingIcon size={36} />;
+    case "gold": return <GoldIngotIcon size={36} />;
+    case "diamond": return <DiamondIcon size={36} />;
+    default: return <ShieldIcon size={36} />;
+  }
+}
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -97,9 +114,9 @@ export default async function ServiceDetailPage({ params }: Props) {
             </ScrollReveal>
             <ScrollReveal animation="reveal-right">
               <div>
-                <span style={{ fontSize: "2.5rem", display: "block", marginBottom: "16px" }}>
-                  {service.icon}
-                </span>
+                <div style={{ color: "var(--gold)", marginBottom: "16px" }}>
+                  {getServiceIcon(service.iconKey)}
+                </div>
                 <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "1.75rem", marginBottom: "4px" }}>
                   {service.title}
                 </h2>
